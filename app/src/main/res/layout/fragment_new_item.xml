@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".NewItemFragment">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBatLayout"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@color/design_default_color_primary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/title"
+                android:hint="Title"
+                android:textSize="32sp"
+                android:inputType="text"
+                android:textColorHint="#ffffff"
+                app:met_baseColor="#ffffff"
+                app:met_floatingLabel="@android:color/white"
+                app:met_primaryColor="@android:color/white"
+                app:met_singleLineEllipsis="true"
+                >
+            </com.rengwuxian.materialedittext.MaterialEditText>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/descrpition"
+                android:hint="Description"
+                android:textSize="24sp"
+                android:inputType="textMultiLine"
+                android:textColorHint="#ffffff"
+                app:met_baseColor="#ffffff"
+                app:met_floatingLabel="@android:color/white"
+                app:met_primaryColor="@android:color/white"
+                app:met_singleLineEllipsis="true"
+                />
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addButton"
+        android:layout_marginRight="10dp"
+        android:layout_width="wrap_content"
+        app:elevation="6dp"
+        app:pressedTranslationZ="12dp"
+        app:layout_anchor="@id/appBatLayout"
+        app:layout_anchorGravity="bottom|right"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_add_24"/>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
